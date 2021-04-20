@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
+<head>
+	<title>Code Type</title>
+	<meta th:remove="tag" th:include="commons :: common-meta"/>
+	<meta th:remove="tag" th:include="commons :: common-css"/>
+</head>
+
+<body>
+
+	<section id="container" class="">
+		<!--header start-->
+		<div class="header-section" th:include="commons :: header-section"></div>
+
+		<!--sidebar start-->
+		<div class="header-section" th:include="commons :: main-menu"></div>
+
+		<!--main content start-->
+		<section id="main-content">
+			<section class="wrapper site-min-height">
+				<!-- page start-->
+				<div class="row">
+					<div class="col-lg-6">
+						<section class="panel">
+							<header class="panel-heading">
+								<a th:href="@{/system/codetype}" class="btn btn-primary btn-xs"><i class="fas fa-redo-alt"></i> New</a>
+								<a th:if="${#strings.isEmpty(codeType.codeType)}" class="btn btn-success btn-xs mainform-btn confirm-btn"><i class="fas fa-paper-plane"></i> <span>Submit</span></a>
+								<a th:if="${not #strings.isEmpty(codeType.codeType) and codeType.status}" class="btn btn-success btn-xs mainform-btn confirm-btn"><i class="fas fa-paper-plane"></i> <span>Update</span></a>
+								<a th:if="${not #strings.isEmpty(codeType.codeType) and codeType.status}" th:href="@{/system/codetype/} + ${codeType.codeType}" class="btn btn-xs btn-danger mainform-btn archive-btn"><i class="fas fa-trash-alt"></i> Archive</a>
+								<a th:if="${not #strings.isEmpty(codeType.codeType) and not codeType.status}" th:href="@{/system/codetype/} + ${codeType.codeType}" class="btn btn-xs btn-success mainform-btn restore-btn"><i class="fas fa-trash-alt"></i> Archive</a>
+								<span class="tools pull-right">
+									<a class="fa fa-chevron-down" href="javascript:;"></a>
+								</span>
+							</header>
+							<div class="panel-body">
+								<form id="mainform" th:action="@{/system/codetype/save}" method="POST" th:object="${codeType}">
+									<input th:if="${not #strings.isEmpty(codeType.codeType)}" type="hidden" th:field="*{codeType}"/>
+									<div th:if="${not #strings.isEmpty(codeType.codeType)}" class="form-group">
+										<label for="codeType">Code Type</label>
+										<input 	type="text" 
+												class="form-control" 
+												th:value="${codeType.codeType}"
+												disabled="disabled"/>
+									</div>
+									<div class="form-group">
+										<label for="prompt">Prompt</label>
+										<input 	type="text" 
+												class="form-control" 
+												th:field="*{prompt}"
+												required="required"/>
+									</div>
+									<div class="form-group">
+										<label class="label_check" for="allowParent">
+											<input th:field="*{allowParent}" type="checkbox"/> Allow Parent?
+										</label>
+									</div>
+									<div class="form-group">
+										<label class="label_check" for="dashboardMenu">
+											<input th:field="*{dashboardMenu}" type="checkbox"/> Show as Dashboard menu?
+										</label>
+									</div>
+								</form>
+							</div>
+						</section>
+					</div>
+
+					<div class="col-lg-6">
+						<section class="panel">
+							<header class="panel-heading">
+								Code Types
+								<span class="tools pull-right">
+									<a class="fa fa-chevron-down" href="javascript:;"></a>
+								</span>
+							</header>
+							<div class="panel-body">
+								<table class="table table-bordered table-stripped datatable">
+									<thead>
+										<tr>
+											<th>Code Type</th>
+											<th>Prompt</th>
+											<th>Allow Parent?</th>
+											<th>Dashboard Menu?</th>
+											<th>Status</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr th:each="c : ${codeTypes}">
+											<td>
+												<a th:href="@{/system/codetype/} + ${c.codeType}" th:text="${c.codeType}"></a>
+											</td>
+											<td th:text="${c.prompt}"></td>
+											<td th:text="${c.allowParent ? 'Y' : 'N'}"></td>
+											<td th:text="${c.dashboardMenu ? 'Y' : 'N'}"></td>
+											<td th:text="${c.status ? 'Active' : 'Inactive'}"></td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+						</section>
+					</div>
+				</div>
+
+				<!-- page end-->
+			</section>
+		</section>
+		<!--main content end-->
+
+		<!--footer start-->
+		<!-- Footer section -->
+		<div class="footer-section" th:include="commons :: footer-section"></div>
+	</section>
+
+	<div th:remove="tag" th:include="commons :: common-js"></div>
+</body>
+</html>

@@ -1,0 +1,38 @@
+server:
+  servlet:
+    context-path: /kit-client/
+    session:
+      persistent: true
+  port: 8081
+  error:
+    whitelabel:
+      enabled: false
+spring: 
+  application:    name: KIT-CLIENT
+  thymeleaf:    cache: false
+  datasource: 
+    driver-class-name: org.postgresql.Driver
+    url: jdbc:postgresql://localhost:5432/shopwise
+    username: postgres
+    password: zubayer%123
+    tomcat:
+      max-wait: 20000
+      max-active: 50
+      max-idle: 20
+      min-idle: 15
+  jpa:
+    generate-ddl: true
+    hibernate:
+      ddl-auto: update
+      naming:
+        physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+        id:
+          new-generator-mappings: false
+  jackson:
+    serialization:
+      indent-output: true
+  banner:
+    location: kit-banner.txt

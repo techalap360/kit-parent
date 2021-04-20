@@ -1,0 +1,231 @@
+<!-- COMMON MEAT INFO -->
+<head th:fragment="common-meta" xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="author" content="Zubayer Ahamed">
+	<link rel="shortcut icon" th:href="@{/img/favicon.html}">
+</head>
+
+<!-- COMMON-CSS -->
+<head th:fragment="common-css" xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
+	<!-- Bootstrap core CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"/>
+	<link th:href="@{/css/bootstrap-reset.css}" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdn.datatables.net/1.10.20/css/dataTables.bootstrap.min.css"/>
+
+	<!--external css-->
+	<link rel="stylesheet" th:href="@{/assets/fontawesome/fontawesome.css}"/>
+	<link rel="stylesheet" th:href="@{/assets/fontawesome/brands.css}"/>
+	<link rel="stylesheet" th:href="@{/assets/fontawesome/solid.css}"/>
+
+	<!-- <link rel="stylesheet" type="text/css" th:href="@{/assets/bootstrap-fileupload/bootstrap-fileupload.css}" />
+	<link rel="stylesheet" type="text/css" th:href="@{/assets/bootstrap-wysihtml5/bootstrap-wysihtml5.css}" />
+	<link rel="stylesheet" type="text/css" th:href="@{/assets/bootstrap-datepicker/css/datepicker.css}" />
+	<link rel="stylesheet" type="text/css" th:href="@{/assets/bootstrap-timepicker/compiled/timepicker.css}" />
+	<link rel="stylesheet" type="text/css" th:href="@{/assets/bootstrap-colorpicker/css/colorpicker.css}" />
+	<link rel="stylesheet" type="text/css" th:href="@{/assets/bootstrap-daterangepicker/daterangepicker-bs3.css}" />
+	<link rel="stylesheet" type="text/css" th:href="@{/assets/bootstrap-datetimepicker/css/datetimepicker.css}" />
+	<link rel="stylesheet" type="text/css" th:href="@{/assets/jquery-multi-select/css/multi-select.css}" /> -->
+
+	<!--right slidebar-->
+	<link th:href="@{/css/slidebars.css}" rel="stylesheet">
+
+	<!--toastr-->
+	<link th:href="@{/assets/toastr-master/toastr.css}" rel="stylesheet" type="text/css" />
+	<link rel="stylesheet" type="text/css" th:href="@{/css/lobibox.min.css}"/>
+
+	<!--  summernote -->
+	<link th:href="@{/assets/summernote/dist/summernote.css}" rel="stylesheet">
+
+	<link  rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.17.47/css/bootstrap-datetimepicker.min.css"/>
+
+	<!-- Custom styles for this template -->
+	<link th:href="@{/css/style.css}" rel="stylesheet">
+	<link th:href="@{/css/style-responsive.css}" rel="stylesheet" />
+	<link th:href="@{/css/ck-ui.css}" rel="stylesheet" />
+</head>
+
+<!-- COMMON-JS -->
+<div th:fragment="common-js" xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
+	<!-- js placed at the end of the document so the pages load faster -->
+	<script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+	<!-- Data table -->
+	<script type="text/javascript" src="https://cdn.datatables.net/1.10.20/js/jquery.dataTables.min.js"></script>
+	<script type="text/javascript" src="https://cdn.datatables.net/1.10.20/js/dataTables.bootstrap.min.js"></script>
+
+	<script th:src="@{/js/jquery.dcjqaccordion.2.7.js}" class="include" type="text/javascript" ></script>
+	<script th:src="@{/js/jquery.scrollTo.min.js}"></script>
+	<script th:src="@{/js/slidebars.min.js}"></script>
+	<script th:src="@{/js/jquery.nicescroll.js}" type="text/javascript"></script>
+	<script th:src="@{/js/respond.min.js}"></script>
+
+	<!-- <script type="text/javascript" th:src="@{/assets/fuelux/js/spinner.min.js}"></script>
+	<script type="text/javascript" th:src="@{/assets/bootstrap-fileupload/bootstrap-fileupload.js}"></script>
+	<script type="text/javascript" th:src="@{/assets/bootstrap-wysihtml5/wysihtml5-0.3.0.js}"></script>
+	<script type="text/javascript" th:src="@{/assets/bootstrap-wysihtml5/bootstrap-wysihtml5.js}"></script>
+	<script type="text/javascript" th:src="@{/assets/bootstrap-datepicker/js/bootstrap-datepicker.js}"></script>
+	<script type="text/javascript" th:src="@{/assets/bootstrap-datetimepicker/js/bootstrap-datetimepicker.js}"></script>
+	<script type="text/javascript" th:src="@{/assets/bootstrap-daterangepicker/moment.min.js}"></script>
+	<script type="text/javascript" th:src="@{/assets/bootstrap-daterangepicker/daterangepicker.js}"></script>
+	<script type="text/javascript" th:src="@{/assets/bootstrap-colorpicker/js/bootstrap-colorpicker.js}"></script>
+	<script type="text/javascript" th:src="@{/assets/bootstrap-timepicker/js/bootstrap-timepicker.js}"></script>
+	<script type="text/javascript" th:src="@{/assets/jquery-multi-select/js/jquery.multi-select.js}"></script>
+	<script type="text/javascript" th:src="@{/assets/jquery-multi-select/js/jquery.quicksearch.js}"></script> -->
+
+	<!--toastr-->
+	<script th:src="@{/assets/toastr-master/toastr.js}"></script>
+	<script type="text/javascript" th:src="@{/js/lobibox.min.js}"></script>
+	<script type="text/javascript" th:src="@{/js/messageboxes.min.js}"></script>
+	<script type="text/javascript" th:src="@{/js/notifications.min.js}"></script>
+
+	<!--summernote-->
+	<script th:src="@{/assets/summernote/dist/summernote.min.js}"></script>
+
+	<!--common script for all pages-->
+	<script th:src="@{/js/common-scripts.js}"></script>
+
+	<!-- Form validator -->
+	<script type="text/javascript" th:src="@{/js/ck-ui/smoke.js}"></script>
+
+	<!-- Date picker -->
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+	<!-- <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/eonasdan-bootstrap-datetimepicker/4.17.47/js/bootstrap-datetimepicker.min.js"></script> -->
+	<script type="text/javascript" th:src="@{/js/ck-ui/ck-datepicker.js}"></script>
+
+	<!-- ck ui -->
+	<script type="text/javascript" th:src="@{/js/ck-ui/ck-functions.js}"></script>
+	<script type="text/javascript" th:src="@{/js/ck-ui/ck-ui.js}"></script>
+	<script type="text/javascript" th:src="@{/js/ck-ui/ck-search-suggest.js}"></script>
+	<script>
+		jQuery(document).ready(function() {
+			$('.summernote').summernote({
+				height : 200, // set editor height
+				minHeight : null, // set minimum height of editor
+				maxHeight : null, // set maximum height of editor
+				focus : true
+			// set focus to editable area after initializing summernote
+			});
+		});
+	</script>
+</div>
+
+<!-- HEADER -->
+<div class="header-section" th:fragment="header-section" xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
+	<a th:href="@{/}" class="basePath"></a>
+	<span th:remove="tag" th:include="commons :: loading-mask"></span>
+	<header class="header white-bg">
+		<div class="sidebar-toggle-box"><i class="fas fa-bars"></i></div>
+		<!--logo start-->
+		<a th:href="@{/}" class="logo">KIT <span>BO</span></a>
+		<!--logo end-->
+		
+		<div class="top-nav ">
+			<ul class="nav pull-right top-menu">
+				<li><input type="text" class="form-control search" placeholder="Search"></li>
+				<!-- user login dropdown start-->
+				<li class="dropdown">
+					<a data-toggle="dropdown" class="dropdown-toggle" href="#"> 
+						<img alt="" th:src="@{/img/avatar1_small.jpg}"> <span class="username">Jhon Doue</span> <b class="caret"></b>
+					</a>
+					<ul class="dropdown-menu extended logout">
+						<div class="log-arrow-up"></div>
+						<li><a href="#"><i class="fas fa-id-card-alt"></i>Profile</a></li>
+						<li><a href="#"><i class="fas fa-cog"></i>Settings</a></li>
+						<li>
+							<a href="#"><i class="fas fa-bell"></i>Notification</a>
+						</li>
+						<li>
+							<a th:href="@{/logout}"><i class="fas fa-sign-out-alt"></i> Log Out</a>
+						</li>
+					</ul>
+				</li>
+
+			</ul>
+		</div>
+	</header>
+	<!--header end-->
+</div>
+
+
+<!-- MAIN - MENU -->
+<div class="navbar navbar-inverse" th:fragment="main-menu" xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
+	<aside>
+		<div id="sidebar" class="nav-collapse ">
+			<!-- sidebar menu start-->
+			<ul class="sidebar-menu" id="nav-accordion">
+				<li>
+					<a class="active" th:href="@{/}">
+						<i class="fas fa-tachometer-alt"></i>
+						<span>Dashboard</span>
+					</a>
+				</li>
+				<li class="sub-menu">
+					<a href="javascript:;">
+						<i class="fas fa-cogs"></i>
+						<span>System</span>
+					</a>
+					<ul class="sub">
+						<li><a th:href="@{/system/codetype}">Code Type</a></li>
+						<li th:each="c : ${codeTypesMenu}">
+							<a th:href="@{/system/xcodes?codetype=} + ${c.codeType}" th:text="${c.prompt}">Prompt</a>
+						</li>
+					</ul>
+				</li>
+			</ul>
+			<!-- sidebar menu end-->
+		</div>
+	</aside>
+	<!--sidebar end-->
+</div>
+
+<!-- FOOTER -->
+<div class="footer-section" th:fragment="footer-section" xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
+	<footer class="site-footer">
+		<div class="text-center">
+			2021 &copy; Karigor IT. <a href="#" class="go-top"><i class="fa fa-angle-up"></i></a>
+		</div>
+	</footer>
+	<!--footer end-->
+	<!-- <span th:remove="tag" th:include="commons :: alert-section"></span>
+	<div th:remove="tag" th:replace="commons :: progressmask"></div> -->
+</div>
+
+<!-- Utility -->
+<!-- ALERT -->
+<div th:fragment="alert-section" xmlns:th="http://www.thymeleaf.org">
+	<div class="ck-alert nodisplay alert alert-dismissible fade in">
+		<a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a> 
+		<strong class="ck-alert-identifier">Success!</strong> <span class="ck-alert-message">This alert box could indicate a successful or positive action.</span>
+	</div>
+</div>
+
+<!-- Loading mask -->
+<div th:fragment="loading-mask" xmlns:th="http://www.thymeleaf.org">
+	<div class="loading-mask nodisplay"></div>
+	<div id="loadingmask2" class="nodisplay">
+		<div id="loadingdots" class="nodisplay">
+			<div id="loadingdots_1" class="loadingdots nodisplay">W</div>
+			<div id="loadingdots_2" class="loadingdots nodisplay">A</div>
+			<div id="loadingdots_3" class="loadingdots nodisplay">I</div>
+			<div id="loadingdots_4" class="loadingdots nodisplay">T</div>
+			<div id="loadingdots_5" class="loadingdots nodisplay">I</div>
+			<div id="loadingdots_6" class="loadingdots nodisplay">N</div>
+			<div id="loadingdots_7" class="loadingdots nodisplay">G</div>
+		</div>
+	</div>
+</div>
+
+<div id="progressmask" th:fragment="progressmask" xmlns:th="http://www.thymeleaf.org">
+	<div class="progress-box">
+		<div class="progress">
+			<link rel="stylesheet" type="text/css" th:href="@{/css/progressmask.css}" />
+			<div 	class="progress-bar progress-bar-success progress-bar-striped" 
+					role="progressbar"
+					aria-valuemin="0" aria-valuemax="100" style="width: 0%">
+					0% complete
+			</div>
+		</div>
+	</div>
+</div>

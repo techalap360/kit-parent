@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
+<head>
+	<title>Dashboard</title>
+	<meta th:remove="tag" th:include="commons :: common-meta"/>
+	<meta th:remove="tag" th:include="commons :: common-css"/>
+</head>
+
+<body>
+
+	<section id="container" class="">
+		<!--header start-->
+		<div class="header-section" th:include="commons :: header-section"></div>
+
+		<!--sidebar start-->
+		<div class="header-section" th:include="commons :: main-menu"></div>
+
+		<!--main content start-->
+		<section id="main-content">
+			<section class="wrapper site-min-height">
+				<!-- page start-->
+				Page content goes here
+				<!-- page end-->
+			</section>
+		</section>
+		<!--main content end-->
+
+		<!--footer start-->
+		<!-- Footer section -->
+		<div class="footer-section" th:include="commons :: footer-section"></div>
+	</section>
+
+	<div th:remove="tag" th:include="commons :: common-js"></div>
+</body>
+</html>
