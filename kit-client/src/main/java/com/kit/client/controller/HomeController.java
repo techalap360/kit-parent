@@ -15,7 +15,7 @@ public class HomeController {
 
 	@GetMapping
 	public String loadHomePage(Model model) {
-		
-		return "index";
+
+		return "pages/home/home";
 	}
 }

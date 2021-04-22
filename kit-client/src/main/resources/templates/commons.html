@@ -1,0 +1,172 @@
+<!-- COMMON MEAT INFO -->
+<head th:fragment="common-meta" xmlns:th="http://www.thymeleaf.org">
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta content="Zubayer Ahamed" name="author">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="Shopwise is Powerful features and You Can Use The Perfect Build this Template For Any eCommerce Website. The template is built for sell Fashion Products, Shoes, Bags, Cosmetics, Clothes, Sunglasses, Furniture, Kids Products, Electronics, Stationery Products and Sporting Goods.">
+	<meta name="keywords" content="ecommerce, electronics store, Fashion store, furniture store,  bootstrap 4, clean, minimal, modern, online store, responsive, retail, shopping, ecommerce store">
+	<link rel="shortcut icon" type="image/x-icon" th:href="@{assets/images/favicon.png}">
+</head>
+
+<!-- COMMON-CSS -->
+<head th:fragment="common-css" xmlns:th="http://www.thymeleaf.org">
+	<!-- Animation CSS -->
+	<link rel="stylesheet" th:href="@{/assets/css/animate.css}">	
+
+	<!-- Latest Bootstrap min CSS -->
+	<link rel="stylesheet" th:href="@{/assets/bootstrap/css/bootstrap.min.css}">
+
+	<!-- Google Font -->
+	<link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900&display=swap" rel="stylesheet"> 
+	<link href="https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap" rel="stylesheet"> 
+
+	<!-- Icon Font CSS -->
+	<link rel="stylesheet" th:href="@{/assets/css/all.min.css}">
+	<link rel="stylesheet" th:href="@{/assets/css/ionicons.min.css}">
+	<link rel="stylesheet" th:href="@{/assets/css/themify-icons.css}">
+	<link rel="stylesheet" th:href="@{/assets/css/linearicons.css}">
+	<link rel="stylesheet" th:href="@{/assets/css/flaticon.css}">
+	<link rel="stylesheet" th:href="@{/assets/css/simple-line-icons.css}">
+
+	<!--- owl carousel CSS-->
+	<link rel="stylesheet" th:href="@{/assets/owlcarousel/css/owl.carousel.min.css}">
+	<link rel="stylesheet" th:href="@{/assets/owlcarousel/css/owl.theme.css}">
+	<link rel="stylesheet" th:href="@{/assets/owlcarousel/css/owl.theme.default.min.css}">
+
+	<!-- Magnific Popup CSS -->
+	<link rel="stylesheet" th:href="@{/assets/css/magnific-popup.css}">
+
+	<!-- Slick CSS -->
+	<link rel="stylesheet" th:href="@{/assets/css/slick.css}">
+	<link rel="stylesheet" th:href="@{/assets/css/slick-theme.css}">
+
+	<!-- Style CSS -->
+	<link rel="stylesheet" th:href="@{/assets/css/style.css}">
+	<link rel="stylesheet" th:href="@{/assets/css/responsive.css}">
+</head>
+
+<!-- Common JS -->
+<div th:fragment="common-js" xmlns:th="http://www.thymeleaf.org">
+	<!-- Latest jQuery --> 
+	<script th:src="@{/assets/js/jquery-1.12.4.min.js}"></script> 
+	<!-- popper min js -->
+	<script th:src="@{/assets/js/popper.min.js}"></script>
+	<!-- Latest compiled and minified Bootstrap --> 
+	<script th:src="@{/assets/bootstrap/js/bootstrap.min.js}"></script> 
+	<!-- owl-carousel min js  --> 
+	<script th:src="@{/assets/owlcarousel/js/owl.carousel.min.js}"></script> 
+	<!-- magnific-popup min js  --> 
+	<script th:src="@{/assets/js/magnific-popup.min.js}"></script> 
+	<!-- waypoints min js  --> 
+	<script th:src="@{/assets/js/waypoints.min.js}"></script> 
+	<!-- parallax js  --> 
+	<script th:src="@{/assets/js/parallax.js}"></script> 
+	<!-- countdown js  --> 
+	<script th:src="@{/assets/js/jquery.countdown.min.js}"></script> 
+	<!-- imagesloaded js --> 
+	<script th:src="@{/assets/js/imagesloaded.pkgd.min.js}"></script>
+	<!-- isotope min js --> 
+	<script th:src="@{/assets/js/isotope.min.js}"></script>
+	<!-- jquery.dd.min js -->
+	<script th:src="@{/assets/js/jquery.dd.min.js}"></script>
+	<!-- slick js -->
+	<script th:src="@{/assets/js/slick.min.js}"></script>
+	<!-- elevatezoom js -->
+	<script th:src="@{/assets/js/jquery.elevatezoom.js}"></script>
+	<!-- scripts js --> 
+	<script th:src="@{/assets/js/scripts.js}"></script>
+</div>
+
+<!-- Preloader -->
+<div th:fragment="preloader" xmlns:th="http://www.thymeleaf.org">
+	<div class="preloader">
+		<div class="lds-ellipsis">
+			<span></span> <span></span> <span></span>
+		</div>
+	</div>
+</div>
+
+<!-- Onload Popup -->
+<div th:fragment="onload-popup" xmlns:th="http://www.thymeleaf.org">
+	<div class="modal fade subscribe_popup" id="onload-popup" tabindex="-1" role="dialog" aria-hidden="true">
+		<div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+			<div class="modal-content">
+				<div class="modal-body">
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+						<span aria-hidden="true"><i class="ion-ios-close-empty"></i></span>
+					</button>
+					<div class="row no-gutters">
+						<div class="col-sm-7">
+							<div class="popup_content text-left">
+								<div class="popup-text">
+									<div class="heading_s1">
+										<h3>Subscribe Newsletter and Get 25% Discount!</h3>
+									</div>
+									<p>Subscribe to the newsletter to receive updates about new products.</p>
+								</div>
+								<form method="post">
+									<div class="form-group">
+										<input name="email" required type="email" class="form-control" placeholder="Enter Your Email">
+									</div>
+									<div class="form-group">
+										<button class="btn btn-fill-out btn-block text-uppercase" title="Subscribe" type="submit">Subscribe</button>
+									</div>
+								</form>
+								<div class="chek-form">
+									<div class="custome-checkbox">
+										<input 	class="form-check-input" type="checkbox" name="checkbox" id="exampleCheckbox3" value=""> 
+										<label class="form-check-label" for="exampleCheckbox3"><span>Don't show this popup again!</span></label>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="col-sm-5">
+							<div class="background_bg h-100" th:data-img-src="@{/assets/images/popup_img3.jpg}"></div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<!-- Newsletter -->
+<div th:fragment="newsletter" xmlns:th="http://www.thymeleaf.org">
+	<div class="section bg_default small_pt small_pb">
+			<div class="custom-container">
+				<div class="row align-items-center">
+					<div class="col-md-6">
+						<div class="newsletter_text text_white">
+							<h3>Join Our Newsletter Now</h3>
+							<p>Register now to get updates on promotions.</p>
+						</div>
+					</div>
+					<div class="col-md-6">
+						<div class="newsletter_form2 rounded_input">
+							<form>
+								<input type="text" required="" class="form-control" placeholder="Enter Email Address">
+								<button type="submit" class="btn btn-dark btn-radius" name="submit" value="Submit">Subscribe</button>
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
