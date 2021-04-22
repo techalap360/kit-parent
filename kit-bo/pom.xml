@@ -12,7 +12,7 @@
 	<artifactId>kit-bo</artifactId>
 	<name>KIT BO</name>
 	<description>Karigor IT Back Office</description>
-	<packaging>war</packaging>
+	<packaging>jar</packaging>
 
 	<properties>
 		<java.version>1.8</java.version>
@@ -55,6 +55,7 @@
 							<goal>repackage</goal>
 						</goals>
 						<configuration>
+							<finalName>KIT-BO</finalName>
 							<mainClass>${class.main}</mainClass>
 						</configuration>
 					</execution>
